@@ -1,113 +1,151 @@
-import Image from 'next/image'
+import { ArrowRightIcon } from "@heroicons/react/24/solid";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <>
+    <p className="text-3xl text-center hidden max-lg:block uppercase font-bold">This page is not designed for mobile devices.</p>
+      <main className="xl:p-20 sm:p-0 overflow-x-hidden max-lg:hidden">
+        <section className="bg-black w-full h-[1000px] bg-[url('/images/background.jpg')] bg-no-repeat bg-cover rounded-3xl flex relative">
+          <img
+            src="/images/warrior.png"
+            alt="The Warrior"
+            className="absolute bottom-0 -right-[100px] w-[900px] h-auto z-10"
+          />
+
+          <svg
+            width="1226"
+            height="1127"
+            viewBox="0 0 1226 1127"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute bottom-0 -right-[100px]"
           >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+            <path
+              d="M1225 1C1126.85 21.6869 914.29 138.142 849.239 438.466C784.188 738.791 256.642 1021.96 1 1126"
+              stroke="white"
             />
-          </a>
-        </div>
-      </div>
+          </svg>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+          <nav className="w-40 h-full border-r border-[#8B7C71] flex flex-col items-center p-14 gap-[50%]">
+            <svg
+              width="52"
+              height="45"
+              viewBox="0 0 52 45"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="cursor-pointer"
+            >
+              <path
+                d="M2 2H50M26 15.5H50M26 29H50M2 42.5H50"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M2 14.75L14 22.25L2 29.75V14.75Z"
+                stroke="white"
+                stroke-width="4"
+                stroke-linejoin="round"
+              />
+            </svg>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <ul className="transform -rotate-90 flex gap-12">
+              <li className="text-white text-4xl cursor-pointer">Facebook</li>
+              <div className="w-1 h-full border-r-2 border-[#FF0303]"></div>
+              <li className="text-white text-4xl cursor-pointer">Twitter</li>
+              <div className="w-1 h-full border-r-2 border-[#FF0303]"></div>
+              <li className="text-white text-4xl cursor-pointer">Instagram</li>
+            </ul>
+          </nav>
+          <article className="px-14 py-24 relative z-30 bg-black/40 w-full 2xl:bg-transparent">
+            <h1 className="uppercase text-9xl text-white font-black">
+              the <br /> warrior
+            </h1>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <div className="flex items-center gap-28">
+              <h2 className="text-3xl text-white">
+                The <br /> Story
+              </h2>
+              <div>
+                <div className="flex gap-10 py-14">
+                  <p className="text-white text-2xl">20 December 2022</p>
+                  <div className="w-1 h-9 border-r-2 border-[#FF0303]"></div>
+                  <p className="text-white text-2xl">Fantasy, Drama</p>
+                </div>
+                <p className="text-white text-2xl pb-10">
+                  The Warrior Thomasin , a mutated monster <br /> hunter,
+                  struggles to find his place in a world <br /> in which people
+                  often prove more wicked <br /> than beasts.
+                </p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+                <div className="flex gap-5 items-center cursor-pointer">
+                  <p className="text-[#FF0303] text-2xl">Read more</p>{" "}
+                  <ArrowRightIcon className="text-[#FF0303] w-6 h-6" />{" "}
+                </div>
+              </div>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+            <div className="flex items-center gap-20">
+              <h2 className="text-3xl text-white">Trailers</h2>
+              <div>
+                <div className="flex gap-5 pt-14">
+                  <div className="relative">
+
+                  <div className="w-48 h-30 overflow-hidden rounded-xl cursor-pointer ">
+                    <img
+                      src="/images/01.jpg"
+                      alt="01"
+                      className="scale-105 w-full h-full object-cover"
+                    />
+                
+                  </div>
+                  <p className="text-3xl text-white font-bold absolute right-2 -bottom-3">01</p>
+                  </div>
+
+                  <div className="relative">
+
+                  <div className="w-48 h-30 overflow-hidden rounded-xl cursor-pointer ">
+                    <img
+                      src="/images/02.jpg"
+                      alt="02"
+                      className="scale-105 w-full h-full object-cover"
+                    />
+                
+                  </div>
+                  <p className="text-3xl text-white font-bold absolute right-2 -bottom-3">02</p>
+                  </div>
+                  <div className="relative">
+
+                  <div className="w-48 h-30 overflow-hidden rounded-xl cursor-pointer ">
+                    <img
+                      src="/images/03.jpg"
+                      alt="03"
+                      className="scale-105 w-full h-full object-cover"
+                    />
+                
+                  </div>
+                  <p className="text-3xl text-white font-bold absolute right-2 -bottom-3">03</p>
+                  </div>
+                </div>
+                <div className="flex gap-5 py-14">
+                  <p className="text-white text-lg cursor-pointer">
+                    Privacy Policy
+                  </p>
+                  <div className="w-1 h-7 border-r-2 border-[#FF0303]"></div>
+                  <p className="text-white text-lg cursor-pointer">
+                    Term of Use
+                  </p>
+                  <div className="w-1 h-7 border-r-2 border-[#FF0303]"></div>
+                  <p className="text-white text-lg cursor-pointer">Setting</p>
+                  <div className="w-1 h-7 border-r-2 border-[#FF0303]"></div>
+                  <p className="text-white text-lg cursor-pointer">Credits</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </>
+  );
 }
